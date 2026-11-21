@@ -1,0 +1,31 @@
+* Paleta institucional IPET 249 */
+:root {
+  --bordo: #6d0f1f;
+  --bordo-oscuro: #3e0610;
+  --amarillo: #ffd400;
+  --rojo: #e53935;
+  --blanco: #ffffff;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: radial-gradient(circle at 50% 30%, var(--bordo) 0%, var(--bordo-oscuro) 100%);
+  color: var(--blanco);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+#gameCanvas {
+  height: min(92vh, 640px);
+  aspect-ratio: 400 / 640;
+  max-width: 100vw;
+  border: 4px solid var(--amarillo);
+  border-radius: 10px;
+  background: var(--bordo);
+  touch-action: none;
+  display: block;
+}
+.ayuda { margin: 0; font-size: 13px; color: var(--amarillo); text-align: center; }
+@media (max-width: 500px) { .ayuda { display: none; } }
